@@ -3,7 +3,7 @@ In this repository you'll find several **solutions to the critical section probl
 
 ## 1. Rompe-empate
 
-###   1.1. Two processes
+### 1.1. Two processes
 
 In the first part of the exercise we consider two processes and we need to solve the critical section problem. In order to do that we use two variables, globally declared as:
 
@@ -23,7 +23,7 @@ We will need another variable in order to know which one is the last one that ha
 |in1 = False    | in2 = False|
 
 
-###   1.2. N processes
+### 1.2. N processes
     
 In order to solve the critical section problem for a program with N processes, we will need several arrays
 

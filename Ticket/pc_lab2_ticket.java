@@ -13,7 +13,7 @@ public class pc_lab2_ticket {
 	
 	public static void main(String[] args) {
 		//inicializamos turno a -1 como si no lo hubiesen pedido aun
-		for(int i = 0; i < 2*M + 1; i++){
+		for(int i = 0; i < 2*M; i++){
 			turn[i] = -1;
 		}
 		

@@ -35,6 +35,10 @@ As in the last solution, we'll use variables in and last, and we'll assign an id
 
 This solution consists in giving a certain turn to each process, by taking the last number avaliable at the time of arriving to the critical section. Having also a 'next' variable, each process waits before accessing the critical section till their turn arrives. Each process squeme should be:
 
+>int[] turn
+
+>int number, next
+
 |**Process i**|
 |:------------|
 |turn[i] = number|          
@@ -43,4 +47,18 @@ This solution consists in giving a certain turn to each process, by taking the l
 |**CS**|
 |next = next + 1|
 
+## 3. Bakery
 
+This solution seems similar to the Ticket, nevertheless it doesn't use the 'number' and 'next' variables, instead, it traverses the 'turn' array to get the higher one, so it knows that it's turn is the higher one + 1. 
+To replace the next variable, before accessing the critical section, it traverses the turn array in shuch a way that if it finds a smaller turn, the process keeps waiting because the other one has arrived before, till there's no smaller turn in the array and it can access the critical section. Just by using the turn array it achieves the same result.
+
+> int[ ] turn, from 0 to n -1 processes
+
+The general scheme of this algorithm is the next one:
+
+| **Process i**        |
+|:------------|
+|<turn[ i ] = max(turn)>|
+|`for(j = 0 to n)` {while(turn[ i ] >= turn[ j ] && turn[ j ] != 0)**;**}|
+|**CS**|
+|turn[ i ] = -1 |

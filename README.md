@@ -1,7 +1,7 @@
 # Concurrent-programming
- Algorithims developed in concurrent programming, a subject taken in the third year of computer science 
+In this repository you'll find several **solutions to the critical section problem**, in this case, we want to create several processes that increment a number and some others that decrement it, so the solution after executing them must be 0. We need to implement some kind of control over the processes so we don't run into data looses.
 
-## **1. Rompe-empate**
+## 1. Rompe-empate
 
 ###   1.1. Two processes
 

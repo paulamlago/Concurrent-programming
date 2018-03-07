@@ -27,6 +27,20 @@ We will need another variable in order to know which one is the last one that ha
     
 In order to solve the critical section problem for a program with N processes, we will need several arrays
 
-> Int[ ] in, last;
+> Int\[ ] in, last;
 
 As in the last solution, we'll use variables in and last, and we'll assign an id for each process.
+
+## 2. Ticket
+
+This solution consists in giving a certain turn to each process, by taking the last number avaliable at the time of arriving to the critical section. Having also a 'next' variable, each process waits before accessing the critical section till their turn arrives. Each process squeme should be:
+
+|**Process i**|
+|:------------|
+|turn[i] = number|          
+|number = number + 1|
+|while(turn[i] != next)**;**|
+|**CS**|
+|next = next + 1|
+
+

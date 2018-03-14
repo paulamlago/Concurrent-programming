@@ -1,0 +1,14 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/.class": true,
+    "README.md": true,
+    "Rompe-empate/incrementador.class": true,
+    "Rompe-empate/pc_lab2_a.class": true,
+    "Rompe-empate/pc_lab2_b.class": true,
+    "Rompe-empate/decrementador.class": true
+  }
+}

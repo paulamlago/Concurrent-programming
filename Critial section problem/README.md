@@ -62,3 +62,24 @@ The general scheme of this algorithm is the next one:
 |`for(j = 0 to n)` {while(turn[ i ] >= turn[ j ] && turn[ j ] != 0)**;**}|
 |**CS**|
 |turn[ i ] = -1 |
+
+
+## 4. Test and set
+This is the only solution in this repository that is not fair since we can't ensure that every process access the cs.
+It's based on having a boolean variable to check if there's any process running the cs.
+
+> Boolean lock = false
+
+Then, every process will wait till that lock is false (not taken), in that moment the process will call the function:
+
+> Boolean TS(Boolean lock)
+
+This will return the value of the lock and will change it's value to True, saying that this process is taking the lock, so it'll enter the cs. This is the structure of the code:
+
+|**Process i**|
+|:------------|
+|while(lock);|
+|while(`TS(lock)`){|
+|    while(lock); } |
+|**CS**|
+|lock = false|

@@ -21,8 +21,4 @@ public class decrementador implements Runnable {
 			
 			pc_lab2_ticket.next++;
 	}
-	
-
-		
-
 }

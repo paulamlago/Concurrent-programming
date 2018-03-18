@@ -3,8 +3,8 @@ class coord{
     public static int N = 3; //we will use 3x3 matrix
 
     public static int[][] C = new int[N][N]; //solution
-    public static int[][] A = new int[][]{{2, 0, 1}, {3, 0, 0}, {5, 1, 1}};
-    public static int[][] B = new int[][]{{1, 0, 1}, {1, 2, 1}, {1, 1, 0}};
+    protected static int[][] A = new int[][]{{2, 0, 1}, {3, 0, 0}, {5, 1, 1}};
+    protected static int[][] B = new int[][]{{1, 0, 1}, {1, 2, 1}, {1, 1, 0}};
 
     public static Thread[] workers = new Thread[N];
 

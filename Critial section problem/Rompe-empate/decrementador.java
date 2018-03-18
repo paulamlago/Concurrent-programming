@@ -1,4 +1,3 @@
-
 public class decrementador implements Runnable {
 
 	private int id;

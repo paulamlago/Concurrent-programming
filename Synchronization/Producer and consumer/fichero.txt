@@ -1,0 +1,3 @@
+este es el fichero
+que tienen que leer
+e imprimir.

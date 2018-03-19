@@ -24,9 +24,7 @@ public class decrementador implements Runnable {
 			}
 			
 			//CS
-			for (int i = 0; i < pc_lab2_bakery.N; i++){
-				pc_lab2_bakery.n--;
-			}
+			pc_lab2_bakery.n -= pc_lab2_bakery.M;
 
 			//protocolo de salida
 			pc_lab2_bakery.turn[id] = -1;

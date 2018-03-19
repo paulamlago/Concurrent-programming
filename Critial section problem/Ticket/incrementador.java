@@ -17,9 +17,7 @@ public class incrementador implements Runnable {
 			while (pc_lab2_ticket.turn[id] != pc_lab2_ticket.next); //esperamos en esta condicion
 
 			//CS
-			for (int i = 0; i < pc_lab2_ticket.N; i++){
-				pc_lab2_ticket.n++;
-			}
+			pc_lab2_ticket.n += pc_lab2_ticket.M;
 
 			//protocolo de salida
 			pc_lab2_ticket.next++; //no es necesario que hagamos esta ejecucion atomica ya que solo puede

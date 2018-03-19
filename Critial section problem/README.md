@@ -28,6 +28,7 @@ We will need another variable in order to know which one is the last one that ha
 In order to solve the critical section problem for a program with N processes, we will need several arrays
 
 > Int\[ ] in, last;
+
 Each process has an id assigned to it, and in each one will go through N stages, and in each one we will assign in[id] = stage and last[stage] = id. 
 In this way we can wait in each stage till the process checks that it's the first one that came into it.
 

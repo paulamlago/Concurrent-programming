@@ -14,9 +14,7 @@ public class decrementador implements Runnable {
 			while (pc_lab2_ticket.turn[id] != pc_lab2_ticket.next);
 
 			//CS
-			for (int i = 0; i < pc_lab2_ticket.N; i++){
-				pc_lab2_ticket.n--;
-			}
+			pc_lab2_ticket.n -= pc_lab2_ticket.M;
 			//FIN CS
 			
 			pc_lab2_ticket.next++;

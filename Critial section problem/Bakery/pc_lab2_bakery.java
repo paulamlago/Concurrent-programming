@@ -1,5 +1,3 @@
-//TICKET PARA HACERLO CON N PROCESOS
-
 public class pc_lab2_bakery {
 	final static int M = 10; //creamos 10 hilos
 	final static int N = 2000; //cada uno lo modifica en 2000 unidades
@@ -17,8 +15,8 @@ public class pc_lab2_bakery {
 		}
 		
 		for (int i = 0; i < M; i++){
-			incrementadores[i] = new Thread(new incrementador(i)); //los incrementadores tendran ids de 0 hasta M -1
-			decrementadores[i] = new Thread(new decrementador(i + M)); //los decrementadores tendran ids de M a 2M -1
+			incrementadores[i] = new Thread(new incrementador(i));
+			decrementadores[i] = new Thread(new decrementador(i + M)); 
 			decrementadores[i].start(); //empezamos ambos procesos
 			incrementadores[i].start();
 		}

@@ -28,7 +28,7 @@ public class incrementador implements Runnable {
 		}
 		
 		//CS
-		pc_lab2_ticket.n += pc_lab2_ticket.M;
+		pc_lab2_b.n += pc_lab2_b.M;
 		//FIN CS
 		
 		pc_lab2_b.in[id] = 0;

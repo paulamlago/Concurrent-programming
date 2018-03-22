@@ -20,3 +20,24 @@ Each worker, after modifying the number, will set it's flagg arrive to 1, and wa
 |continue[i] = 0         |for(int i = 0 to n-1)**{**|
 |                        |   continue[i] = 1 **}**|
 
+# 2. Symmetric barrier
+By ussing this symetric barrier we don't need a coordinator. It consist in having several stages, where each proccess coordinates with the one that is 2^0 possitions to the left, then with the one that is 2^1 possitions to the left and so one...
+The goal of this piece of code is to compute the prefix of an array, being the initial array the represented in the first row, we get the second one:
+
+| 1 | 2 | 3 | 4 | 5 | 6 |
+|:--|:--|:--|:--|:--|:--|
+| 1 | 3 | 6 | 10 | 15 | 21 |
+
+The process is the following:
+
+|Stage 0 |1  |2  |3  |4  |5  |6  |
+|:------|:--|:--|:--|:--|:--|:--|
+|Stage 1| 1 | 3 | 5 | 7 | 9 | 11 |
+|Stage 2| 1 | 3 | 6 | 10 | 14 | 18 |
+|Stage 3| 1 | 3 | 6 | 10 | 15 | 21 |
+
+To achieve this solution we'll need several arrays:
+
+> int initial[N], sum[N], old[N]
+
+In the fist one we'll save the original array and the second one will be the solution in every stage, while the third one is the one in charge of saving the changes so any process can take an old value of a certain possition.

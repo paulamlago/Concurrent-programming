@@ -29,7 +29,8 @@ In order to solve the critical section problem for a program with N processes, w
 
 > Int\[ ] in, last;
 
-As in the last solution, we'll use variables in and last, and we'll assign an id for each process.
+Each process has an id assigned to it, and in each one will go through N stages, and in each one we will assign in[id] = stage and last[stage] = id. 
+In this way we can wait in each stage till the process checks that it's the first one that came into it.
 
 ## 2. Ticket
 
